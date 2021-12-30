@@ -50,9 +50,12 @@ Route::prefix('admin')->middleware('role:admin')->group(function(){
         Route::post('submitResetPass',[ResetPass::class,'submitResetPass'])->name('change.password');
 
 // BRANDS
-    Route::get('viewBrands',[adminController::class,'viewBrands'])->name('brands.home');
-    Route::get('viewAddBrands',[adminController::class,'showAddbrands'])->name('add.brandsView');
-    Route::post('submitBrands',[adminController::class,'submitBrands'])->name('add.brands');
+        Route::get('viewBrands',[adminController::class,'viewBrands'])->name('brands.home');
+        Route::get('viewAddBrands',[adminController::class,'showAddbrands'])->name('add.brandsView');
+        Route::post('submitBrands',[adminController::class,'submitBrands'])->name('add.brands');
+        Route::get('editBrands/{id}',[adminController::class,'showEditPageBrands'])->name('edit.page');
+        Route::post('getEditMall',[adminController::class,''])->name('editMall');
+
 });
 
 // SUPER ADMIN CONTROLLS

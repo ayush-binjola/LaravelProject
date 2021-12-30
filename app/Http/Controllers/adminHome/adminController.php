@@ -347,4 +347,10 @@ class adminController extends Controller
         return view('admin.brands.addBrands');
     }
 
+    public function showEditPageBrands($id)
+    {
+        $data = Brand::find($id);
+        return view('admin.brands.editBrands',['values'=>$data]);
+    }
+
 }

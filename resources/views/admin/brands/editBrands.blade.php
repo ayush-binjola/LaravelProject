@@ -48,6 +48,12 @@
     </form>
     </div>
     <script>
+        function addNewDetails()
+        {
+            document.getElementById('addButton').addEventListner('click',function(){
+
+            });
+        }
 
 
     </script>
